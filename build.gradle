@@ -15,10 +15,12 @@ dependencies {
 
     // JPA, 하이버네이트
     // hibernate-core.jar, hibernate-jpa-2.1-api.jar 라이브러리도 함께 내려받는다.
-    implementation 'org.hibernate:hibernate-entitymanager:4.3.10.Final'
+    implementation 'org.hibernate:hibernate-entitymanager:5.6.15.Final'
     // H2 데이터베이스
     // H2 데이터베이스에 접속해야 하므로 h2 라이브러리도 지정한다.
-    implementation 'com.h2database:h2:1.4.187'
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    implementation 'com.h2database:h2:2.1.214'
+
 }
 
 test {
