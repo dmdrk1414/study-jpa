@@ -46,17 +46,25 @@ public class JpaMain {
         member.setAge(2);
 
         //등록
+        // p85. 저장을 하는 메서드, 매개 변수에 저장할 엔티티를 넘겨준다.
         em.persist(member);
 
         //수정
+        // p85. 수정자 메소드(set)메소드 호출
         member.setAge(20);
 
         //한 건 조회
+        // p86. @Id로 데이터베이스 테이블의 기본키와 매핑한 식별자 값으로 엔티티 하나를 조회
         Member findMember = em.find(Member.class, id);
         System.out.println("findMember=" + findMember.getUsername() + ", age=" + findMember.getAge());
 
         //목록 조회
-        List<Member> members = em.createQuery("select m from Member m", Member.class).getResultList();
+        // p87. JPQL
+        // 하나 이상의 회원 목록을 조회하는 다음 코드를 자세히 살펴보자.
+        // JPQL을 사용하기 위해서는 em.createQuery(JPQL, 반환_타입.class) 메소드를 실행하서
+        // query.getResultList()을 실행한다.
+        TypedQuery<Member> query = em.createQuery("select m from Member m", Member.class);
+        List<Member> members = query.getResultList();
         System.out.println("members.size=" + members.size());
 
         //삭제
