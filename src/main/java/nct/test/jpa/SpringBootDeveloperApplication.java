@@ -1,4 +1,4 @@
-package nct.test.entity;
+package nct.test.jpa;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
