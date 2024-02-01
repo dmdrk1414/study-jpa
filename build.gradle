@@ -28,6 +28,10 @@ dependencies {
 
     // mysql 연결
     implementation 'mysql:mysql-connector-java:8.0.27'
+
+    // 반복 메서드 작성 작업을 줄여준다.
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
