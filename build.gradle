@@ -15,6 +15,9 @@ dependencies {
     // Spring MVC를 사용해서 RESTful 웹 서비스를 개발할때 필요한 의존성 모음
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
+    //  스프링 데이터 JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
