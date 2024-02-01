@@ -5,3 +5,4 @@ CREATE TABLE MEMBER (
     PRIMARY KEY (ID)
 )
 
+
